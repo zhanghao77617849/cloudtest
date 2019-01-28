@@ -1,0 +1,13 @@
+
+
+server:
+  port: 8761
+  
+eureka:
+  instance:
+    hostname: peer1
+  client:
+    service-url:
+      defaultZone: http://peer2:8769/eureka/,http://peer3:8770/eureka/
+    register-with-eureka: true
+    fetch-registry: true

@@ -1,0 +1,8 @@
+server:
+  port: 8988
+
+spring:
+  zipkin:
+    base-url: htt://localhost:9411  #设置zipkin服务器器地址
+  application:
+    name: service-zipkin

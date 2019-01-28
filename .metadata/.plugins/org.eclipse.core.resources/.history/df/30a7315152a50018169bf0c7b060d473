@@ -1,0 +1,11 @@
+package com.jingjing.servicefeign;
+
+public class SchedualServiceHiHystric implements SchedualServiceHi {
+
+	@Override
+	public String sayHiFromClientOne(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

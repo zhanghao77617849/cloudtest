@@ -1,0 +1,19 @@
+package com.jingjing.serviceservicezuul;
+
+import com.netflix.appinfo.RefreshableAmazonInfoProvider.FallbackAddressProvider;
+
+public class ServiceHiFallbackProvider implements FallbackAddressProvider {
+
+	@Override
+	public String getFallbackIp() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getFallbackHostname() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

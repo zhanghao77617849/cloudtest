@@ -1,0 +1,18 @@
+
+
+server:
+  port: 8761
+  
+spring:
+  profiles:peer1
+  
+eureka:
+  instance:
+    hostname: peer1
+  client:
+    service-url:
+      defaultZone: http://peer2:8769/eureka/,http://peer3:8770/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+    
+    #这里显式的把registerWithEureka，fetchRegistry设为true，作为服务注册，当单点时，要设置为false。或者将application.yml的属性设为true，因为即使启动时加了参数peer1也会加载application.yml.

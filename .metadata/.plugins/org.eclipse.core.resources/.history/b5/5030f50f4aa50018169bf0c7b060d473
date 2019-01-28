@@ -1,0 +1,8 @@
+package com.jingjing.servicefeign;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient(value="service-hi")  //调用的服务
+public interface SchedualServiceHi {
+
+}

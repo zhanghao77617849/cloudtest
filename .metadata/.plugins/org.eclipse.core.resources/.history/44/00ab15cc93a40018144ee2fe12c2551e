@@ -1,0 +1,5 @@
+package com.jingjing.serviceribbon;
+
+public class HelloService {
+
+}

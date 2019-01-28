@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      label: master  #远程仓库的分支
+      profile: dev    #dev 开发环境配置文件  test 测试环境  pro 正式环境
+      #uri: http://localhsot:8888/  #指明配置服务中心的网址
+      discovery:
+        enabled: true  #是否从配置中心读取文件
+        service-id: config-server  #配置中心的服务名
+    bus:          #spring.cloud.bus 
+      enabled: true
+      trace:
+        enabled: true
+  rabbitmq:     #spring.rabbitmq
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    
+
+server:
+  port: 8881 
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka/   
+      
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+        
+#我们只需要发送post请求：http://localhost:8881/actuator/bus-refresh，你会发现config-client会重新读取配置文件：
+#/actuators-refresh接口可以指定服务，即使用”destination”参数，比如 “/actuators-refresh?destination=customers:**” 即刷新服务名为customers的所有服务。

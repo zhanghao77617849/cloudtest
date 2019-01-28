@@ -1,0 +1,21 @@
+package com.jingjing.serviceservicezuul;
+
+
+
+public class ServiceHiFallbackProvider implements FallbackAddressProvider {
+
+	@Override
+	public String getFallbackIp() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getFallbackHostname() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	getrou
+
+}

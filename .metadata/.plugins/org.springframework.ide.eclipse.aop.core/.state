@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="service-feign"/>
+<aop-project name="service-zipkin"/>
+<aop-project name="service-lucy"/>
+<aop-project name="config-server"/>
+<aop-project name="eureka-server"/>
+<aop-project name="config-client"/>
+<aop-project name="service-hi">
+<aspect-definition advice-class-name="com.netflix.hystrix.contrib.javanica.aop.aspectj.HystrixCommandAspect" advice-method-name="methodsAnnotatedWithHystrixCommand(org.aspectj.lang.ProceedingJoinPoint)" advice-type="AROUND" aspect-end-line-number="-1" aspect-name="hystrixCommandAspect" aspect-start-line-number="-1" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/service-hi/src/main/java/com/jingjing/servicehi/ServiceHiApplication.java" pointcut-expression="hystrixCommandAnnotationPointcut() || hystrixCollapserAnnotationPointcut()" proxy-target-class="true">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:service-hi|3:java:com.jingjing.servicehi.ServiceHiApplication|8:serviceHiApplication:31" bean-file="/service-hi/src/main/java/com/jingjing/servicehi/ServiceHiApplication.java" bean-start-line="31" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/service-hi/src/main/java/com/jingjing/servicehi/ServiceHiApplication.java" source="=service-hi/E:\/apache-maven-3.5.3-bin\/apache-maven-3.5.3\/repository\/com\/netflix\/hystrix\/hystrix-javanica\/1.5.12\/hystrix-javanica-1.5.12.jar&lt;com.netflix.hystrix.contrib.javanica.aop.aspectj(HystrixCommandAspect.class[HystrixCommandAspect~methodsAnnotatedWithHystrixCommand~Lorg.aspectj.lang.ProceedingJoinPoint;" source-start-line="-1" target="=service-hi/src\/main\/java&lt;com.jingjing.servicehi{ServiceHiApplication.java[ServiceHiApplication~home~QString;" target-start-line="42"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="service-miya"/>
+<aop-project name="forward"/>
+<aop-project name="service-zuul"/>
+<aop-project name="service-ribbon">
+<aspect-definition advice-class-name="com.netflix.hystrix.contrib.javanica.aop.aspectj.HystrixCommandAspect" advice-method-name="methodsAnnotatedWithHystrixCommand(org.aspectj.lang.ProceedingJoinPoint)" advice-type="AROUND" aspect-end-line-number="-1" aspect-name="hystrixCommandAspect" aspect-start-line-number="-1" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/service-ribbon/src/main/java/com/jingjing/serviceribbon/ServiceRibbonApplication.java" pointcut-expression="hystrixCommandAnnotationPointcut() || hystrixCollapserAnnotationPointcut()" proxy-target-class="true">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:service-ribbon|3:java:com.jingjing.serviceribbon.ServiceRibbonApplication|8:helloService:10" bean-file="/service-ribbon/src/main/java/com/jingjing/serviceribbon/HelloService.java" bean-start-line="10" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/service-ribbon/src/main/java/com/jingjing/serviceribbon/ServiceRibbonApplication.java" source="=service-ribbon/E:\/apache-maven-3.5.3-bin\/apache-maven-3.5.3\/repository\/com\/netflix\/hystrix\/hystrix-javanica\/1.5.12\/hystrix-javanica-1.5.12.jar&lt;com.netflix.hystrix.contrib.javanica.aop.aspectj(HystrixCommandAspect.class[HystrixCommandAspect~methodsAnnotatedWithHystrixCommand~Lorg.aspectj.lang.ProceedingJoinPoint;" source-start-line="-1" target="=service-ribbon/src\/main\/java&lt;com.jingjing.serviceribbon{HelloService.java[HelloService~hiService~QString;" target-start-line="16"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="cloud"/>
+</aop-reference-model>

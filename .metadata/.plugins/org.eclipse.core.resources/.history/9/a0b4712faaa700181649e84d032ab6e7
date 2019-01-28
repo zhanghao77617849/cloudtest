@@ -1,0 +1,21 @@
+package com.jingjing.serviceservicezuul;
+
+import org.springframework.cloud.netflix.zuul.filters.route.FallbackProvider;
+import org.springframework.http.client.ClientHttpResponse;
+
+public class ServiceHiFallbackProvider implements FallbackProvider {
+
+	@Override
+	public String getRoute() {
+		return "service-rebbon";
+	}
+
+	@Override
+	public ClientHttpResponse fallbackResponse(String route, Throwable cause) {
+		
+		return null;
+	}
+
+	
+
+}
